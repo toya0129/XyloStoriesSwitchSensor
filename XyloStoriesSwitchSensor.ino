@@ -9,18 +9,18 @@
 #define C2 6
 
 // Switch State
-boolean Cstate = false;
-boolean Dstate = false;
-boolean EState = false;
-boolean FState = false;
-boolean GState = false;
-boolean AState = false;
-boolean BState = false;
-boolean C2state = false;
+int Cstate;
+int Dstate;
+int Estate;
+int Fstate;
+int Gstate;
+int Astate;
+int Bstate;
+int C2state;
  
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(119600);
+  Serial.begin(19200);
 
   PinSet();
 
@@ -56,14 +56,22 @@ void SensorRead(){
 }
 
 void SendData(){
-  Serial.print(Cstate + "¥t");
-  Serial.print(Dstate + "¥t");
-  Serial.print(Estate + "¥t");
-  Serial.print(Fstate + "¥t");
-  Serial.print(Gstate + "¥t");
-  Serial.print(Astate + "¥t");
-  Serial.print(Bstate + "¥t");
-  Serial.print(C2state + "¥t");
+  Serial.print(Cstate);
+  Serial.print("\t");
+  Serial.print(Dstate);
+  Serial.print("\t");
+  Serial.print(Estate);
+  Serial.print("\t");
+  Serial.print(Fstate);
+  Serial.print("\t");
+  Serial.print(Gstate);
+  Serial.print("\t");
+  Serial.print(Astate);
+  Serial.print("\t");
+  Serial.print(Bstate);
+  Serial.print("\t");
+  Serial.print(C2state);
+  Serial.print("\t");
   Serial.print("end");
   Serial.println("");
 }
